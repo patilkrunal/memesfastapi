@@ -1,5 +1,7 @@
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -135,4 +137,10 @@ input:nth-child(2n) {
   color: white;
   font-weight: bold;
   margin-left: 0.5rem;
+}
+
+@media (max-width: 425px) {
+  .navbar {
+    display: block;
+  }
 }

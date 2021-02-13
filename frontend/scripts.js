@@ -39,7 +39,7 @@ request.send();
 var form = document.getElementById("myform");
 
 form.addEventListener( "submit", (event) => {
-  event.preventDefault();
+  // event.preventDefault();
   var request = new XMLHttpRequest();
   var url = "https://memefastapi.herokuapp.com/meme/";
   request.open("POST", url, true);
