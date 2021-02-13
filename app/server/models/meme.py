@@ -9,8 +9,8 @@ class MemeSchema(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "user": "John Doe",
-                "url": "http://localhost:8000/docs#/"
+                "user": "Diwakar Singh",
+                "url": "http://www.quickmeme.com/img/5d/5d1e705c13192f4cafed66b6c91c6c0bea852181393fed347615c448ac0993d1.jpg"
             }
         }
 
@@ -22,8 +22,8 @@ class UpdateMemeModel(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "user": "John Doe",
-                "url": "http://localhost:8000/docs#/"
+                "user": "Diwakar Singh",
+                "url": "http://www.quickmeme.com/img/5d/5d1e705c13192f4cafed66b6c91c6c0bea852181393fed347615c448ac0993d1.jpg"
             }
         }
 
