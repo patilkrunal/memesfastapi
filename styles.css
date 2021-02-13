@@ -118,6 +118,8 @@ input {
   height: 2rem;
   width: 17rem;
   border: none;
+  padding-left: 8px;
+  padding-right: 8px;
   border-radius: 7px;
 }
 
