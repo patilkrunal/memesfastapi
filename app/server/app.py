@@ -7,6 +7,7 @@ origins = [
     "https://gitkp11.github.io/memesfastapi/",
     "https://gitkp11.github.io/",
     "https://memefastapi.herokuapp.com/meme/",
+    "http://localhost:5500/",
 ]
 
 app.add_middleware(
