@@ -20,7 +20,7 @@ def meme_helper(meme) -> dict:
 
 async def retrieve_memes():
     memes = []
-    async for meme in meme_collection.find():
+    async for meme in meme_collection.find().sort([('$natural', -1)]):
         memes.append(meme_helper(meme))
     return memes
 
