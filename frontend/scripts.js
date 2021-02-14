@@ -46,7 +46,7 @@ request.send();
 var form = document.getElementById("myform");
 
 form.addEventListener( "submit", (event) => {
-  event.preventDefault();
+ // event.preventDefault();
   var request = new XMLHttpRequest();
   
   request.open("POST", URL, true);
