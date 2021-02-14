@@ -28,6 +28,15 @@ h1 {
   color: white;
 }
 
+h4 {
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  margin: 0 0 2rem 0;
+  /* font-size: 1.5rem; */
+  color: white;
+}
+
 img {
   display: block;
   margin: 1rem;
@@ -116,23 +125,31 @@ form button {
 
 input {
   height: 2rem;
-  width: 17rem;
+  width: 10rem;
   border: none;
-  font-size: 1rem;
-  padding-left: 8px;
-  padding-right: 8px;
   border-radius: 7px;
 }
 
-input:first-child {
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
-  border-right: 1px outset;
-}
+@media (min-width: 425px) {
+  .first input:first-child {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-right: 1px outset;
+  }
 
-input:nth-child(2n) {
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
+  .first input:nth-child(2n) {
+    border-radius: 0;
+    border-right: 1px outset;
+  }
+
+  .second input:first-child {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  form .first, .second {
+    display: flex;
+  }
 }
 
 .active a{
@@ -145,5 +162,52 @@ input:nth-child(2n) {
 @media (max-width: 425px) {
   .navbar {
     display: block;
+  }
+
+  .navbar ul {
+    width: 100%;
+    justify-content: center;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  form span input {
+    width: 100%;
+  }
+
+  form .first {
+    width: 50%;
+    border-right: 1px outset;
+  }
+  
+  form .second {
+    width: 50%;
+    border-left: 1px outset;
+  }
+
+  form .first input{
+    width: 100%;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  
+  form .second input{
+    width: 100%;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  form button {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  input {
+    text-align: center;
   }
 }
