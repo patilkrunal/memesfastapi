@@ -1,6 +1,5 @@
 import motor.motor_asyncio
 from bson.objectid import ObjectId
-from decouple import config
 import urllib.parse
 
 # MongoDB attributes
@@ -11,10 +10,12 @@ meme_collection = database.get_collection("meme_collection")
 
 
 def meme_helper(meme) -> dict:
+    print('\n\n\n\n', meme)
     return {
         "id": str(meme["_id"]),
         "user": meme["user"],
         "url": meme["url"],
+        "caption": meme["caption"]
     }
 
 

@@ -19,9 +19,14 @@
       <li class="active"><a href="/">memestore</a></li>
     </ul>
     <form id="myform">
-      <input type="text" placeholder="Username" name="user" id="user">
-      <input type="text" placeholder="Valid Meme URL" name="url" id="url">
-      <button type="submit" role="button">Post</button>
+      <span class="first">
+        <input type="text" placeholder="Username" name="user" id="user" required>
+        <input type="url" placeholder="Valid Meme URL" name="url" id="url" required>
+      </span>
+      <span class="second">
+        <input type="text" placeholder="Meme caption" name="caption" id="caption" required>
+        <button type="submit" role="button">Post</button>
+      </span>
     </form>
   </div>
 

@@ -1,17 +1,20 @@
 const app = document.getElementById('root');
 const container = document.createElement('div');
-var navbar = document.getElementById("navbar");
 container.setAttribute('class', 'container');
 
 app.appendChild(container);
+// const URL = "https://memefastapi.herokuapp.com/meme/";
+const URL = "http://127.0.0.1:8000/meme/";
 
+// GET REQUEST
 var request = new XMLHttpRequest();
-request.open('GET', 'https://memefastapi.herokuapp.com/meme/');
+request.open('GET', URL);
 
 request.onload = function () {
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     data.data[0].forEach(meme => {
+      console.log('meme', meme)
       const card = document.createElement('div');
       card.setAttribute('class', 'card');
 
@@ -20,6 +23,9 @@ request.onload = function () {
 
       const img = document.createElement('img');
       img.src = meme.url;
+
+      const h4 = document.createElement('h4');
+      h4.textContent = meme.caption;
 
       container.appendChild(card);
       card.appendChild(h1);
@@ -39,10 +45,10 @@ request.send();
 var form = document.getElementById("myform");
 
 form.addEventListener( "submit", (event) => {
-  // event.preventDefault();
+  event.preventDefault();
   var request = new XMLHttpRequest();
-  var url = "https://memefastapi.herokuapp.com/meme/";
-  request.open("POST", url, true);
+  
+  request.open("POST", URL, true);
   request.setRequestHeader("Content-Type", "application/json");
   request.onreadystatechange = function () {
     if (request.readyState === 4 && request.status >= 200 && request.status < 400) {
@@ -53,7 +59,8 @@ form.addEventListener( "submit", (event) => {
 
   var data = JSON.stringify({
     "user": document.getElementById("user").value, 
-    "url": document.getElementById("url").value
+    "url": document.getElementById("url").value,
+    "caption": document.getElementById("caption").value
   });
   request.send(data);  
 });
