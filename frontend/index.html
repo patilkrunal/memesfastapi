@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeArea</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis:400,700"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
 
-  <title>MemeArea</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
+  <body>
+    <div class="navbar">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/memesfastapi"
+            ><img class="logo" src="logo.png" width="50px"
+          /></a>
+        </li>
+        <li class="active"><a href="/memesfastapi">memestore</a></li>
+      </ul>
+      <form id="myform">
+        <span class="first">
+          <input
+            type="text"
+            placeholder="Username"
+            name="user"
+            id="user"
+            required
+          />
+          <input
+            type="url"
+            placeholder="Valid Meme URL"
+            name="url"
+            id="url"
+            required
+          />
+        </span>
+        <span class="second">
+          <input
+            type="text"
+            placeholder="Meme caption"
+            name="caption"
+            id="caption"
+            required
+          />
+          <button type="submit" role="button">Post</button>
+        </span>
+      </form>
+    </div>
 
-</head>
+    <div id="root"></div>
 
-<body>  
-  <div class="navbar">
-    <ul class="nav navbar-nav">
-      <li><a href="/"><img class="logo" src="logo.png" width="50px"></a></li>
-      <li class="active"><a href="/">memestore</a></li>
-    </ul>
-    <form id="myform">
-      <span class="first">
-        <input type="text" placeholder="Username" name="user" id="user" required>
-        <input type="url" placeholder="Valid Meme URL" name="url" id="url" required>
-      </span>
-      <span class="second">
-        <input type="text" placeholder="Meme caption" name="caption" id="caption" required>
-        <button type="submit" role="button">Post</button>
-      </span>
-    </form>
-  </div>
-
-  
-  <div id="root"></div>
-  
-  <script src="scripts.js"></script>
-</body>
-
+    <script src="scripts.js"></script>
+  </body>
 </html>
