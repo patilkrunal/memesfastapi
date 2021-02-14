@@ -5,8 +5,7 @@ from .routes.meme import router as MemeRouter
 app = FastAPI()
 origins = [
     "https://gitkp11.github.io",
-    "http://127.0.0.1:5500",
-    # "https://memefastapi.herokuapp.com/meme/",
+    "http://127.0.0.1:5500"
 ]
 
 app.add_middleware(
