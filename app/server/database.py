@@ -10,10 +10,9 @@ meme_collection = database.get_collection("meme_collection")
 
 
 def meme_helper(meme) -> dict:
-    print('\n\n\n\n', meme)
     return {
         "id": str(meme["_id"]),
-        "user": meme["user"],
+        "name": meme["name"],
         "url": meme["url"],
         "caption": meme["caption"]
     }

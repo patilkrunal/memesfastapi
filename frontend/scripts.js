@@ -4,7 +4,6 @@ container.setAttribute('class', 'container');
 
 app.appendChild(container);
 const URL = "https://memefastapi.herokuapp.com/meme/";
-// const URL = "http://127.0.0.1:8000/meme/";
 
 // GET REQUEST
 var request = new XMLHttpRequest();
@@ -19,7 +18,7 @@ request.onload = function () {
       card.setAttribute('class', 'card');
 
       const h1 = document.createElement('h1');
-      h1.textContent = meme.user;
+      h1.textContent = meme.name;
 
       const img = document.createElement('img');
       img.src = meme.url;
@@ -59,7 +58,7 @@ form.addEventListener( "submit", (event) => {
   };
 
   var data = JSON.stringify({
-    "user": document.getElementById("user").value, 
+    "name": document.getElementById("name").value, 
     "url": document.getElementById("url").value,
     "caption": document.getElementById("caption").value
   });

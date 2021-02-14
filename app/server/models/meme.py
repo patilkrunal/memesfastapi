@@ -3,30 +3,30 @@ from pydantic import BaseModel, Field
 
 
 class MemeSchema(BaseModel):
-    user: str = Field(...)
+    name: str = Field(...)
     url: str = Field(...)
     caption: str = Field(...)
     
     class Config:
         schema_extra = {
             "example": {
-                "user": "John Doe",
-                "url": "http://localhost:8000/docs#/",
+                "name": "Diwakar Singh",
+                "url": "https://www.exterro.com/images/uploads/blogPosts/Monkey-Puppet-Meme-LinkedIn.png",
                 "caption": "This is a meme"
             }
         }
 
 
 class UpdateMemeModel(BaseModel):
-    user: Optional[str]
+    name: Optional[str]
     url: Optional[str]
     caption: Optional[str]
     
     class Config:
         schema_extra = {
             "example": {
-                "user": "John Doe",
-                "url": "http://localhost:8000/docs#/",
+                "name": "Diwakar Singh",
+                "url": "https://www.exterro.com/images/uploads/blogPosts/Monkey-Puppet-Meme-LinkedIn.png",
                 "caption": "This is a meme"
             }
         }
