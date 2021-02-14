@@ -23,6 +23,9 @@ request.onload = function () {
 
       const img = document.createElement('img');
       img.src = meme.url;
+      
+      const h4 = document.createElement('h4');
+      h4.textContent = meme.caption;
 
       const h4 = document.createElement('h4');
       h4.textContent = meme.caption;
@@ -30,6 +33,7 @@ request.onload = function () {
       container.appendChild(card);
       card.appendChild(h1);
       card.appendChild(img);
+      card.appendChild(h4);
     });
   }
    else {
