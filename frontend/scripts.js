@@ -54,7 +54,8 @@ form.addEventListener( "submit", (event) => {
   request.onreadystatechange = function () {
     if (request.readyState === 4 && request.status >= 200 && request.status < 400) {
       var json = JSON.parse(request.responseText);
-      console.log('json', json)
+      console.log('json', json);
+      alert(json);
     }
   };
 
