@@ -5,12 +5,14 @@ from pydantic import BaseModel, Field
 class MemeSchema(BaseModel):
     user: str = Field(...)
     url: str = Field(...)
+    caption: str = Field(...)
     
     class Config:
         schema_extra = {
             "example": {
-                "user": "Diwakar Singh",
-                "url": "http://www.quickmeme.com/img/5d/5d1e705c13192f4cafed66b6c91c6c0bea852181393fed347615c448ac0993d1.jpg"
+                "user": "John Doe",
+                "url": "http://localhost:8000/docs#/",
+                "caption": "This is a meme"
             }
         }
 
@@ -18,12 +20,14 @@ class MemeSchema(BaseModel):
 class UpdateMemeModel(BaseModel):
     user: Optional[str]
     url: Optional[str]
+    caption: Optional[str]
     
     class Config:
         schema_extra = {
             "example": {
-                "user": "Diwakar Singh",
-                "url": "http://www.quickmeme.com/img/5d/5d1e705c13192f4cafed66b6c91c6c0bea852181393fed347615c448ac0993d1.jpg"
+                "user": "John Doe",
+                "url": "http://localhost:8000/docs#/",
+                "caption": "This is a meme"
             }
         }
 
