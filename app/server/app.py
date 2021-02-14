@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(MemeRouter, tags=["Meme"], prefix="/meme")
+app.include_router(MemeRouter, tags=["Meme"], prefix="/memes")
 
 @app.get("/", tags=["Root"])
 async def read_root():
