@@ -1,6 +1,5 @@
 const app = document.getElementById('root');
 const container = document.createElement('div');
-var navbar = document.getElementById("navbar");
 container.setAttribute('class', 'container');
 
 app.appendChild(container);
@@ -20,10 +19,14 @@ request.onload = function () {
 
       const img = document.createElement('img');
       img.src = meme.url;
+      
+      const h4 = document.createElement('h4');
+      h4.textContent = meme.caption;
 
       container.appendChild(card);
       card.appendChild(h1);
       card.appendChild(img);
+      card.appendChild(h4);
     });
   }
    else {
@@ -53,7 +56,8 @@ form.addEventListener( "submit", (event) => {
 
   var data = JSON.stringify({
     "user": document.getElementById("user").value, 
-    "url": document.getElementById("url").value
+    "url": document.getElementById("url").value,
+    "caption": document.getElementById("caption").value
   });
   request.send(data);  
 });
