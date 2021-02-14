@@ -3,8 +3,8 @@ const container = document.createElement('div');
 container.setAttribute('class', 'container');
 
 app.appendChild(container);
-// const URL = "https://memefastapi.herokuapp.com/meme/";
-const URL = "http://127.0.0.1:8000/meme/";
+const URL = "https://memefastapi.herokuapp.com/meme/";
+// const URL = "http://127.0.0.1:8000/meme/";
 
 // GET REQUEST
 var request = new XMLHttpRequest();
@@ -24,9 +24,6 @@ request.onload = function () {
       const img = document.createElement('img');
       img.src = meme.url;
       
-      const h4 = document.createElement('h4');
-      h4.textContent = meme.caption;
-
       const h4 = document.createElement('h4');
       h4.textContent = meme.caption;
 
