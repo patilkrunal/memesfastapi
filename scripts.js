@@ -14,7 +14,7 @@ request.onload = function () {
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     data.data[0].forEach(meme => {
-      console.log('meme', meme)
+//       console.log('meme', meme)
       const card = document.createElement('div');
       card.setAttribute('class', 'card');
 
@@ -54,7 +54,7 @@ form.addEventListener( "submit", (event) => {
   request.onreadystatechange = function () {
     if (request.readyState === 4 && request.status >= 200 && request.status < 400) {
       var json = JSON.parse(request.responseText);
-      console.log('json', json)
+      alert(json);
     }
   };
 
