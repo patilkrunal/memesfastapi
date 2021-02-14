@@ -3,7 +3,7 @@ const container = document.createElement('div');
 container.setAttribute('class', 'container');
 
 app.appendChild(container);
-const URL = "https://memefastapi.herokuapp.com/meme/";
+const URL = "https://memefastapi.herokuapp.com/memes/";
 
 // GET REQUEST
 var request = new XMLHttpRequest();
