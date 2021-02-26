@@ -5,7 +5,7 @@ from .routes.meme import router as MemeRouter
 app = FastAPI()
 origins = [
     "https://diwakarsingh18277.github.io",
-    "https://patilkrunal.github.io/memesfastapi/",
+    "https://patilkrunal.github.io",
     "http://127.0.0.1:5500"
 ]
 
